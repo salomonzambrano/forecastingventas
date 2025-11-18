@@ -8,5 +8,4 @@ streamlit
 joblib
 seaborn
 #jupyter
-plotly
 holidays
