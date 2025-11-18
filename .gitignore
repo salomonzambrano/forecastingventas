@@ -1,0 +1,25 @@
+# .gitignore para proyecto de Machine Learning
+# Ignorar archivos de datos grandes y temporales
+/data/raw/*
+/data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Ignorar notebooks checkpoints
+notebooks/.ipynb_checkpoints/
+
+# Ignorar archivos de entorno
+.env
+
+# Ignorar archivos de salida de Streamlit
+app/__pycache__/
+app/*.pyc
+
+#Ignorar archivos de modelos
+#models/*.pkl
+#models/*.h5
+#models/*.joblib
+
+# Ignorar archivos de sistema
+.DS_Store
+Thumbs.db
