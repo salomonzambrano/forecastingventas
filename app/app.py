@@ -54,7 +54,7 @@ st.markdown("""
 @st.cache_resource
 def cargar_modelo_y_datos():
     try:
-        modelo = joblib.load('/models/modelo_final.joblib')
+        modelo = joblib.load('../models/modelo_final.joblib')
         df = pd.read_csv('../data/processed/inferencia_df_transformado.csv')
         df['fecha'] = pd.to_datetime(df['fecha'])
         return modelo, df
