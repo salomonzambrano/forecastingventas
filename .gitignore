@@ -1,7 +1,7 @@
 # .gitignore para proyecto de Machine Learning
 # Ignorar archivos de datos grandes y temporales
 /data/raw/*
-/data/processed/*
+#/data/processed/*
 !data/raw/.gitkeep
 !data/processed/.gitkeep
 
