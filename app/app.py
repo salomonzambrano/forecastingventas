@@ -5,8 +5,12 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import joblib
 from datetime import datetime
+from pathlib import Path
 import warnings
 warnings.filterwarnings('ignore')
+
+# Obtener la ruta base del proyecto
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Configuración de la página
 st.set_page_config(
@@ -54,8 +58,8 @@ st.markdown("""
 @st.cache_resource
 def cargar_modelo_y_datos():
     try:
-        modelo = joblib.load('../models/modelo_final.joblib')
-        df = pd.read_csv('../data/processed/inferencia_df_transformado.csv')
+        modelo = joblib.load(BASE_DIR / 'models' / 'modelo_final.joblib')
+        df = pd.read_csv(BASE_DIR / 'data' / 'processed' / 'inferencia_df_transformado.csv')
         df['fecha'] = pd.to_datetime(df['fecha'])
         return modelo, df
     except Exception as e:
